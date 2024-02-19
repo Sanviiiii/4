@@ -1,0 +1,87 @@
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git init
+Initialized empty Git repository in C:/Users/Sandhya/Desktop/finalgit/revert/.git/
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git commit -m"name"
+[master (root-commit) dabc25c] name
+ 1 file changed, 3 insertions(+)
+ create mode 100644 a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git commit -m"usn"
+[master c7eec5c] usn
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git log --oneline
+c7eec5c (HEAD -> master) usn
+dabc25c name
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git revert c7eec5c
+[master 9b17ffd] Revert "usn"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git log --oneline
+9b17ffd (HEAD -> master) Revert "usn"
+c7eec5c usn
+dabc25c name
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ cat a.txt
+sandhya
+
+
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git revert 9b17ffd
+[master 599fe48] Reapply "usn"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ git add .
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$ cat a.txt
+sandhya
+
+1ds22cs191
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/revert (master)
+$
