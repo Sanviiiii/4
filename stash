@@ -1,1 +1,83 @@
 
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Sandhya/Desktop/finalgit/stash2/.git/
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash
+You do not have the initial commit yet
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git add .
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git commit -m"g"
+[master (root-commit) 3ad28ae] g
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash
+No local changes to save
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ vi b.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git add .
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash
+Saved working directory and index state WIP on master: 3ad28ae g
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ vi s,txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git add .
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash
+Saved working directory and index state WIP on master: 3ad28ae g
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash list
+stash@{0}: WIP on master: 3ad28ae g
+stash@{1}: WIP on master: 3ad28ae g
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash pop
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   s,txt
+
+Dropped refs/stash@{0} (51c8509a950ac3c07f153ca9fd6db41f778429e8)
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash list
+stash@{0}: WIP on master: 3ad28ae g
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash reapply
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token 'reapply'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash apply
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   b.txt
+        new file:   s,txt
+
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$ git stash list
+stash@{0}: WIP on master: 3ad28ae g
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/stash2 (master)
+$
+
