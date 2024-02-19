@@ -1,0 +1,143 @@
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Sandhya/Desktop/finalgit/6/.git/
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git git remote add origin https://github.com/Sanviiiii/final.git
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git remote add origin https://github.com/Sanviiiii/final.git
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git commit -m"uu"
+[master (root-commit) 48474c8] uu
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 208 bytes | 104.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Sanviiiii/final.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git checkout -b n1
+Switched to a new branch 'n1'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ vi b.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ add .
+bash: add: command not found
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ c0mmit -m"ddd"
+bash: c0mmit: command not found
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ git commit -m"uu"
+On branch n1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        b.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ git add .
+warning: in the working copy of 'b.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ git commit -m"g"
+[n1 1cfcc23] g
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$  git push -u origin n1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 262 bytes | 262.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'n1' on GitHub by visiting:
+remote:      https://github.com/Sanviiiii/final/pull/new/n1
+remote:
+To https://github.com/Sanviiiii/final.git
+ * [new branch]      n1 -> n1
+branch 'n1' set up to track 'origin/n1'.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ git clone https://github.com/Sanviiiii/final.git
+Cloning into 'final'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 1), reused 5 (delta 0), pack-reused 0
+Receiving objects: 100% (10/10), done.
+Resolving deltas: 100% (1/1), done.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ ls
+a.txt  b.txt  final/
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (n1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git clone https://github.com/Sanviiiii/final.git
+fatal: destination path 'final' already exists and is not an empty directory.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ ls
+a.txt  final/
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ git pull origin master
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.77 KiB | 100.00 KiB/s, done.
+From https://github.com/Sanviiiii/final
+ * branch            master     -> FETCH_HEAD
+   48474c8..4baea31  master     -> origin/master
+Updating 48474c8..4baea31
+Fast-forward
+ b.txt | 1 +
+ c.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 b.txt
+ create mode 100644 c.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$ ls
+a.txt  b.txt  c.txt  final/
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/6 (master)
+$
