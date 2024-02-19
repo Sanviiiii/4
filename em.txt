@@ -1,5 +1,170 @@
-hii
 
-Im priyanka chopra
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git init
+Initialized empty Git repository in C:/Users/Sandhya/Desktop/finalgit/1q/.git/
 
-Im priyanka nick
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git config --global user.name
+Sanviiiii
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git config --global user.email
+sandhyam43210@gmail.com
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ vi a,txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git add .
+warning: in the working copy of 'a,txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git commit -m"first"
+[master (root-commit) 19ca837] first
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a,txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git log
+commit 19ca8378bf581d840301b4c0a130dba9b6959ab9 (HEAD -> master)
+Author: Sanviiiii <sandhyam43210@gmail.com>
+Date:   Mon Feb 19 10:23:56 2024 +0530
+
+    first
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git log --oneline
+19ca837 (HEAD -> master) first
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git checkout -b d1
+Switched to a new branch 'd1'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d1)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d1)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d1)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d1)
+$ git commit -m"second"
+[d1 cbbf045] second
+ 1 file changed, 2 insertions(+)
+ create mode 100644 a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d1)
+$ git checkout master
+Switched to branch 'master'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git commit -m"yes"
+[master 9b9c58c] yes
+ 1 file changed, 2 insertions(+)
+ create mode 100644 a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git merge d1
+Auto-merging a.txt
+CONFLICT (add/add): Merge conflict in a.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master|MERGING)
+$ vi a.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master|MERGING)
+$ git add .
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master|MERGING)
+$ git commit
+[master 90f5850] Merge branch 'd1'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git merge d1
+Already up to date.
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git checkout -b d2
+Switched to a new branch 'd2'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d2)
+$ git chekout master
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d2)
+$ git checkout master
+Switched to branch 'master'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git branch --merge
+  d1
+  d2
+* master
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git branch --no-merge
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git checkout -b d3
+Switched to a new branch 'd3'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d3)
+$ vi b.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d3)
+$ git add .
+warning: in the working copy of 'b.txt', LF will be replaced by CRLF the next time Git touches it
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d3)
+$ git commit -m"h"
+[d3 cd024ea] h
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b.txt
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d3)
+$ git branch --no-merge
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d3)
+$ git branch --no-merged
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (d3)
+$ git checkout master
+Switched to branch 'master'
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git branch --no-merged
+  d3
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$ git branch --merged
+  d1
+  d2
+* master
+
+Sandhya@LAPTOP-PNCRG48N MINGW64 ~/Desktop/finalgit/1q (master)
+$
